@@ -1,58 +1,5 @@
-<template>
-  <div>
-    <scrollbar />
-    <div class="Products">
-      <ul class="ProductList">
-        <li class="Product" v-for="product in products" :key="product.id">
-          <div class="Card">
-            <img :src="product.imageUrl" alt="Product Image" width="100" height="100">
-            <h1 class="Title">{{ product.name }}</h1>
-            <p class="Price">Preço: R$ {{ product.price.toFixed(2) }}</p>
-            <button @click="Buy(product)" class="BuyBTN">buy</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
-
-<style scoped>
-.Card {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.BuyBTN {
-  background-color: #111213;
-  color: #f1f1f1;
-  border-radius: 1.5vh;
-  width: 5vh;
-  height: 3vh;
-  margin-left: 2vh;
-}
-
-.ProductList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-img {
-  width: 30vh;
-}
-</style>
-
-<script>
-export default {
-  data() {
-    return {
-      products: [
-      {
+[
+    {
       "id": 1,
       "name": "Macbook Air",
       "description": "Uma potência no ar. O chip M1 da Apple revolucionou nosso notebook mais fino e leve. A CPU e a GPU estão mais rápidas, até 3,5 vezes e até cinco vezes, respectivamente. Nosso Neural Engine avançado deixa o aprendizado de máquina até nove vezes mais veloz. A bateria oferece mais tempo de duração. E trocamos a ventoinha pelo silêncio. Nunca tanto desempenho esteve reunido em um MacBook Air.",
@@ -180,15 +127,4 @@ export default {
       "imageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-nike-s7-digitalmat-gallery-1-202203_GEO_BR?wid=600&hei=500&fmt=png-alpha&.v=1646429070532",
       "inStock": 50
     }
-      ],
-      FinalPrice: 0,
-    };
-  },
-  methods: {
-    Buy(product) {
-      this.FinalPrice += product.price;
-      console.log(this.FinalPrice);
-    },
-  },
-};
-</script>
+  ]

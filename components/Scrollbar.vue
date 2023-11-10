@@ -5,7 +5,6 @@
         <h1 class="Title">Nuxt E-Commerce</h1>
         <div class="Options">
             <NuxtLink to="/"><h1 class="OptionsTitle">Back</h1></NuxtLink>
-            <h1 class="OptionsTitle">View Products</h1>
         </div>
       </div>
     </div>
@@ -54,7 +53,7 @@ export default {
   width: 100%;
   height: 4px;
   border-radius: 4px;
-  background-color: #111213;
+  background-color: #f1f2f3;
   bottom: 0;
   left: 0;
   transform-origin: right;
