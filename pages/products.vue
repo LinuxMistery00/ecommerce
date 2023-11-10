@@ -108,7 +108,7 @@
 
 <script>
 import axios from 'axios';
-import Scrollbar from '~/components/scrollbar.vue';
+import Scrollbar from '~/components/Scrollbar.vue';
 
 export default {
   components: {
